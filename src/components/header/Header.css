@@ -1,3 +1,41 @@
 header {
-    background-color: yellow;
+    display: flex;
+    justify-content: center;
+}
+
+.header-container {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.dc-logo {
+    width: 70px;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding-bottom: 24px;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+    color: #0282f9;
+    border-bottom: 2px solid #0282f9;
 }
