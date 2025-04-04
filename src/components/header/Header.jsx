@@ -15,7 +15,7 @@ const navLinks = [
     { name: 'SHOP', url: '/#' }
 ];
 
-function Header() {
+function Header({ numberOfLink }) {
 
     return (
         <header>
@@ -27,7 +27,7 @@ function Header() {
                     </a>
                 </div>
 
-                <NavbarHeader link={navLinks} />
+                <NavbarHeader link={navLinks} numberOfLink={numberOfLink} />
 
             </div>
         </header>

@@ -3,13 +3,16 @@ import Main from './components/main/Main.jsx';
 import Footer from './components/footer/Footer.jsx';
 import ServiceBar from './components/service-bar/ServiceBar.jsx';
 
-function App() {
+function App({ showSection }) {
+
+  const numberOfLink = showSection.numberOfLink;
+
   return (
     <>
-      <Header />
-      <Main />
+      {showSection.headerIsPresent && <Header numberOfLink={numberOfLink} />}
+      {showSection.mainIsPresent && <Main />}
       <ServiceBar />
-      <Footer />
+      {showSection.footerIsPresent && <Footer />}
     </>
   );
 }
