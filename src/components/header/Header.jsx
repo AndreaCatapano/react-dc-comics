@@ -1,5 +1,6 @@
 import './Header.css';
 import dcLogo from '../../assets/img/dc-logo.png'
+import NavbarHeader from '../Navbar/Navbar.jsx';
 
 const navLinks = [
     { name: 'CHARACTERS', url: '/#' },
@@ -26,19 +27,7 @@ function Header() {
                     </a>
                 </div>
 
-
-                <nav className="main-nav">
-                    <ul className="nav-list">
-                        {navLinks.map((link, index) => (
-                            <li key={index} className="nav-item">
-                                <a href={link.url} className="nav-link">
-                                    {link.name}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
-
+                <NavbarHeader link={navLinks} />
 
             </div>
         </header>
