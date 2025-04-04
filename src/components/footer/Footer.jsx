@@ -1,4 +1,5 @@
 import './Footer.css';
+import FooterLinkSection from '../FooterLinkSection/FooterlinkSection.jsx'
 import FacebookIcon from '../../assets/img/footer-facebook.png';
 import TwitterIcon from '../../assets/img/footer-twitter.png';
 import PeriscopeIcon from '../../assets/img/footer-periscope.png';
@@ -60,55 +61,14 @@ function Footer() {
         <footer>
             <div className='footer-content'>
                 <div className="footer-links-container">
-                    <div className="footer-column">
-                        <h3 className="footer-title">DC COMICS</h3>
-                        <ul className="footer-links">
-                            {dcComicsLinks.map((link, index) => (
-                                <li key={index} className="footer-link-item">
-                                    <a href={link.url} className="footer-link">
-                                        {link.name}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-
-                        <h3 className='footer-title mt'>SHOP</h3>
-                        <ul className='footer-links'>
-                            {shopLinks.map((link, index) => (
-                                <li key={index} className='footer-link-item'>
-                                    <a href={link.url} className='footer-link'>
-                                        {link.name}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
+                    <div>
+                        <FooterLinkSection title="DC COMICS" links={dcComicsLinks} />
+                        <FooterLinkSection title="SHOP" links={shopLinks} />
                     </div>
 
-                    <div className='foouter-culomn'>
-                        <h3 className='footer-title'>DC</h3>
-                        <ul className='footer-links'>
-                            {dcLinks.map((link, index) => (
-                                <li key={index} className='footer-link-item'>
-                                    <a href={link.url} className='footer-link'>
-                                        {link.name}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                    <FooterLinkSection title="DC" links={dcLinks} />
 
-                    <div className='foouter-culomn'>
-                        <h3 className='footer-title'>SITES</h3>
-                        <ul className='footer-links'>
-                            {sitesLinks.map((link, index) => (
-                                <li key={index} className='footer-link-item'>
-                                    <a href={link.url} className='footer-link'>
-                                        {link.name}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                    <FooterLinkSection title="SITES" links={sitesLinks} />
 
                     <div className="footer-logo">
                         <img src={DCLogoBg} alt="DC Logo" />
