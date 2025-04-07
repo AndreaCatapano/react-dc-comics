@@ -10,7 +10,7 @@ const Navbar = ({ link, numberOfLink }) => {
                             <a href={link.url} className="nav-link">
                                 {link.name}
                             </a>
-                        </li>) : ""
+                        </li>) : null
                 ))}
             </ul>
         </nav>
